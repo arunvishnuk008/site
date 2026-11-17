@@ -1,0 +1,404 @@
+@import '../node_modules/quill/dist/quill.snow.css';
+
+/* Inconsolata font */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+html{
+  font-family: 'Inconsolata', monospace;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+  font-size: var(--primary-font-size);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: auto;
+  padding: 5px;
+  align-self: center;
+  max-width: 100%;
+  @media (width > 1279px) {
+    width: 1280px;
+    max-width: 1280px;
+  }
+  @media (width < 1280px) {
+    margin: 8px;
+  }
+}
+
+.extra-light-font{
+  font-weight: 200;
+}
+
+.light-font{
+  font-weight: 300;
+}
+
+.regular-font{
+  font-weight: 400;
+}
+
+.medium-font{
+  font-weight: 500;
+}
+
+.semi-bold-font{
+  font-weight: 600;
+}
+
+.bold-font{
+  font-weight: 700;
+}
+
+.extra-bold-font{
+  font-weight: 800;
+}
+
+.black-font{
+  font-weight: 900;
+}
+
+
+a{
+  color: var(--primary-accent-color);
+  text-decoration: underline double 0.01rem var(--secondary-accent-color);
+  text-underline-offset: 0.3rem;
+  cursor: pointer;
+}
+
+.marg-10px {
+  margin: 10px !important;
+}
+
+a.faux-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  margin: 2px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  place-content: baseline;
+  @media (width < 600px) {
+    display: inline-flex;
+    text-wrap: auto;
+    flex-wrap: wrap;
+  }
+}
+
+img {
+  @media (width > 1279px) {
+    width: 1280px;
+    height: 764px;
+  }
+  @media (width < 1280px) {
+    width: 320px;
+    height: 191px;
+  }
+  @media (width > 640px) {
+    width: 640px;
+    height: 382px;
+  }
+}
+
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky-top {
+  position:sticky;
+  top:0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--primary-bg-color);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.scroll-container {
+  overflow-y: auto;
+}
+
+.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px;
+  background-color: var(--primary-bg-color);
+}
+
+.marg-5px {
+  margin: 5px;
+}
+
+.marg-top-5 {
+  margin-top : 5px;
+}
+
+.centered-image-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.small-font {
+  font-size: var(--small-font-size);
+}
+
+.medium-font {
+  font-size: var(--medium-font-size);
+}
+
+.accent-color {
+  color: var(--primary-accent-color);
+}
+
+.secondary-accent-color {
+  color: var(--secondary-accent-color);
+}
+
+.complementary-accent-color {
+  color: var(--complementary-accent-color);
+}
+
+
+.timeline-stem {
+  list-style-type: '###';
+  list-style-position: outside;
+  color: var(--primary-color);
+  margin: 1px 0 0 3px;
+  padding: 0 0 0 0.6rem;
+  border-left: 3px solid var(--primary-color);
+}
+
+.timeline-stem > li {
+  margin: 2px 0 0 2px;
+  padding: 0 0 0 3px;
+}
+
+.details-box {
+  text-wrap: auto;
+  text-align: left;
+  cursor: pointer;
+}
+
+.no-margin-no-padding {
+  margin: 0;
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.marg-top-10 {
+  margin-top: 10px;
+}
+
+.secondary-bg {
+  background-color: var(--secondary-bg-color);
+}
+
+.accomplishment {
+  padding: 1px;
+  margin: 1px;
+}
+
+.marg-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.primary-underlined {
+  color: var(--primary-color);
+  text-decoration: underline double 0.01rem var(--secondary-accent-color);
+  text-underline-offset: 0.3rem;
+  cursor: pointer;
+}
+
+.primary-color-border {
+  border: 1px solid var(--primary-color);
+}
+
+.padding-5px{
+  padding: 5px;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+select {
+  padding: 2px;
+  margin: 2px;
+  background: var(--primary-bg-color);
+  color: var(--primary-color);
+  border-radius: 1rem;
+  font-family: inherit;
+}
+
+select > option {
+  color: var(--primary-color);
+  font-family: inherit;
+}
+
+button, input[type=submit] {
+  padding: 10px;
+  background: var(--primary-bg-color);
+  color: var(--primary-accent-color);
+  border-radius: 1rem;
+  font-family: inherit;
+}
+
+input[type=text], input[type=password]  {
+  padding: 10px;
+  background: var(--secondary-bg-color);
+  color: var(--primary-accent-color);
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: var(--medium-font-size);
+}
+
+textarea  {
+  padding: 8px;
+  background: var(--secondary-bg-color);
+  color: var(--primary-accent-color);
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: var(--medium-font-size);
+}
+
+
+.flex-place-end {
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.button-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.content-center {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.form {
+  border: 1px solid var(--complementary-accent-color);
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.max-width-80 {
+  max-width: 80% !important;
+}
+
+.min-width-100-px {
+  min-width: 100px;
+}
+
+.medium-font {
+  font-size: var(--medium-font-size) !important;
+}
+
+[quill-editor-toolbar] .ql-font span[data-label="Inconsolata"]::before {
+  font-family: "Inconsolata", monospace;
+}
+
+.ql-font-Inconsolata {
+  font-family: "Inconsolata", monospace;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=Inconsolata]::before, .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=Inconsolata]::before {
+  content: 'Inconsolata';
+}
+
+.tag {
+  border: 1px solid var(--primary-accent-color);
+  border-radius: 1rem;
+  padding: 5px;
+  margin: 5px;
+  place-items: center;
+  max-width: 100px;
+  min-width: 40px;
+  text-wrap: auto;
+  min-height: 30px;
+  max-height: 50px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.tag-btn {
+  border-radius: 1rem;
+  padding: 5px;
+  margin: 5px;
+  place-items: center;
+  min-width: 80px;
+  max-height: 40px;
+}
+
+.error-banner {
+  background-color: var(--primary-accent-color);
+  color: var(--primary-color)
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+
+.place-center {
+  align-items: center;
+}
+
+.blog-post-row-container {
+  display: flex;
+  flex-direction: row;
+  @media (width > 599 px) {
+    align-items: center;
+  }
+  @media (width < 600px) {
+    display: inline-flex;
+    flex-direction: row;
+    overflow: auto;
+    max-width: 80%;
+  }
+}
