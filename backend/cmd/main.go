@@ -37,7 +37,7 @@ func main() {
 	)
 	// cors
 	options := cors.Options{
-		AllowedOrigins: []string{"http://localhost:4200","https://crimson-sunrise.site"},
+		AllowedOrigins: []string{"http://localhost:4200","https://crimson-sunrise.site","http://localhost:8080"},
 		AllowedMethods: []string{http.MethodGet, http.MethodPost, http.MethodPut, http.MethodDelete, http.MethodHead, http.MethodOptions},
 		AllowCredentials: true,
 		AllowedHeaders: []string{"*"},
@@ -57,8 +57,7 @@ func main() {
 func initializeDB() (*sql.DB, error) {
 	datasourceName := os.Getenv("DATABASE_NAME")
 	if datasourceName == "" {
-		log.Print("DATABASE_NAME is empty, using default embedded database!")
-		datasourceName = "SunriseDB.db"
+		log.Fatal("DATABASE_NAME is empty. Please configure a database to start this application.")
 	}
 	database, err := sql.Open("sqlite3", datasourceName)
 	return database, err
